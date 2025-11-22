@@ -9,7 +9,7 @@ function App() {
   return (
     <>
         <div>
-            <h1> Hello kairat </h1>
+            <h1> Hello Aidar </h1>
             <p> Salam Aleykum</p>
         </div>
       <div>
