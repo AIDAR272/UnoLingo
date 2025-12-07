@@ -1,9 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Login from './pages/Login.jsx'
+import Train from './pages/Train.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Login />
-  </StrictMode>,
+    <StrictMode>
+        <Train />
+    </StrictMode>,
 )
