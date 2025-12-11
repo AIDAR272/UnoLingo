@@ -1,0 +1,135 @@
+/* --- Global Resets & Body --- */
+* {
+    box-sizing: border-box; /* Ensures padding doesn't break layout */
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5; /* Softer, modern grey */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* --- Main Container (Shared by Log In and Sign Up) --- */
+.sign-up,
+.log-in {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px; /* Smooth, modern corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Soft, diffused shadow */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* --- Headings --- */
+h1 {
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* --- Form Layout --- */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left; /* Aligns labels to left */
+}
+
+/* --- Labels --- */
+label {
+    margin-bottom: 8px;
+    margin-top: 15px;
+    color: #555;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase; /* Makes labels look cleaner */
+    letter-spacing: 0.5px;
+}
+
+/* --- Inputs (Text & Password) --- */
+/* IMPORTANT: We now include [type="password"] so your password boxes look good */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #fafafa;
+}
+
+/* Input Focus State */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1); /* Soft blue glow */
+}
+
+/* --- Buttons --- */
+button {
+    cursor: pointer;
+    width: 100%;
+    padding: 14px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s, transform 0.1s;
+
+    /* Default Button Style (Primary Action) */
+    background-color: #007bff;
+    color: white;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px); /* Slight lift effect */
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* --- Toggle Link Section ("Already have account?") --- */
+div > p {
+    display: inline-block;
+    margin-right: 8px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+div > span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #007bff !important; /* Force blue color */
+    text-decoration: none !important; /* Remove underline by default */
+    transition: color 0.2s;
+}
+
+div > span:hover {
+    color: #0056b3 !important;
+    text-decoration: underline !important;
+}
+
+/* Container for the bottom text */
+.sign-up > div,
+.log-in > div {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0; /* Subtle separator line */
+}

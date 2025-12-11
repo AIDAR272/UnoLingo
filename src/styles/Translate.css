@@ -1,0 +1,185 @@
+/* --- Page Layout --- */
+.translate-page {
+    width: 100vw; /* Full width */
+    min-height: 100vh;
+    background-color: #f0f2f5; /* Light grey background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Header --- */
+.app-header {
+    width: 100%;
+    background-color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5f6368;
+}
+
+.logout-btn {
+    width: auto;
+    padding: 8px 16px;
+    margin-top: 0;
+    background-color: transparent;
+    color: #d93025; /* Google Red for logout */
+    border: 1px solid #d93025;
+}
+
+.logout-btn:hover {
+    background-color: #fce8e6;
+    transform: none;
+}
+
+/* --- Main Container --- */
+.translate-container {
+    width: 95%;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow: hidden; /* Keeps child corners inside */
+    padding-bottom: 20px;
+}
+
+/* --- Language Bar --- */
+.language-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out elements */
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #fff;
+}
+
+.lang-select {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    color: #1a73e8; /* Google Blue */
+    font-weight: 600;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.lang-select:hover {
+    background-color: #f5f8fd;
+}
+
+.swap-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: #5f6368;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swap-btn:hover {
+    background-color: #f1f3f4;
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+/* --- Translation Box (The two text areas) --- */
+.translation-box {
+    display: flex;
+    min-height: 250px;
+}
+
+.text-area-wrapper {
+    flex: 1; /* Both take equal width */
+    position: relative;
+    padding: 20px;
+}
+
+/* Add a separator line between them */
+.input-wrapper {
+    border-right: 1px solid #e0e0e0;
+}
+
+.output-wrapper {
+    background-color: #f5f5f5; /* Slight grey for output area */
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    resize: none; /* User can't drag to resize */
+    font-size: 1.5rem; /* Large text like Google */
+    font-family: inherit;
+    background-color: transparent;
+    outline: none;
+    color: #333;
+}
+
+textarea::placeholder {
+    color: #757575;
+}
+
+/* --- Clear Button (X) --- */
+.clear-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: #999;
+    font-size: 1.2rem;
+}
+.clear-btn:hover {
+    color: #333;
+    background: transparent;
+    transform: none;
+}
+
+/* --- Action Area (Bottom Button) --- */
+.action-area {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end; /* Align button to right */
+}
+
+.translate-btn {
+    width: auto; /* Don't stretch full width */
+    padding: 12px 30px;
+    margin: 0;
+    border-radius: 24px; /* Pill shape */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* --- Responsive Design (Mobile) --- */
+@media (max-width: 768px) {
+    .translation-box {
+        flex-direction: column; /* Stack top to bottom */
+    }
+
+    .input-wrapper {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        min-height: 200px;
+    }
+
+    .output-wrapper {
+        min-height: 200px;
+    }
+}
