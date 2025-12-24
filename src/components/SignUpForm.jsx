@@ -22,6 +22,10 @@ function SignUpForm({ onSwitch }) {
             });
 
             if(response.ok) {
+                const data = await response.json();
+                console.log("Sign up Success!");
+                localStorage.setItem("token", data.token)
+                localStorage.setItem("id", data.id)
                 navigate("/translate");
             } else {
                 const errorData = await response.json();
@@ -67,6 +71,11 @@ function SignUpForm({ onSwitch }) {
                 <p>Already have account?</p>
                 <span onClick={onSwitch} style={{ cursor: "pointer" }}>
                     Log in
+                </span>
+                <br/>
+                <p>Enter as </p>
+                <span onClick={() => navigate("/translate")} style={{ cursor: "pointer" }}>
+                    Guest
                 </span>
             </div>
         </div>

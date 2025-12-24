@@ -4,7 +4,7 @@ import SignUpForm from "../components/SignUpForm";
 
 
 function Auth() {
-    const [isLoginView, setIsLoginView] = useState(false);
+    const [isLoginView, setIsLoginView] = useState(true);
 
     return (
         <div className="auth-container">

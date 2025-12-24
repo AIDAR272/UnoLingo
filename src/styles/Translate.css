@@ -183,3 +183,49 @@ textarea::placeholder {
         min-height: 200px;
     }
 }
+
+.footer-menu {
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    align-items: flex-start;
+    gap: 60px; /* Space between the Train and Favorite buttons */
+    margin-top: 100px; /* Exactly 100px below the translation box */
+    width: 100%;
+}
+
+/* --- Individual Menu Item (Image + Text) --- */
+.menu-item {
+    display: flex;
+    flex-direction: column; /* Stacks image on top of text */
+    align-items: center; /* Centers text relative to image */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px); /* Subtle lift effect on hover */
+}
+
+/* --- The Images --- */
+.menu-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Circle shape */
+    border: 3px solid #fff; /* White border looks nice on grey bg */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Shadow for depth */
+    object-fit: cover;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+/* --- The Text Labels --- */
+.menu-item p {
+    margin: 0;
+    font-weight: 600;
+    color: #5f6368;
+    font-size: 0.9rem;
+}
+
+/* Hover effect for the icon specifically */
+.menu-item:hover .menu-icon {
+    border-color: #1a73e8; /* Google Blue border on hover */
+}

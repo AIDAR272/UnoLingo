@@ -17,7 +17,9 @@ function LoginForm({ onSwitch }) {
 
             if(response.ok) {
                 const data = await response.json();
-                console.log("Log in Success!", data);
+                console.log("Log in Success!");
+                localStorage.setItem("token", data.token)
+                localStorage.setItem("id", data.id)
                 navigate("/translate");
             } else {
                 const errorData = await response.json();
