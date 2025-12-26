@@ -29,7 +29,7 @@ function Translate() {
             return;
         }
 
-        const url = `http://127.0.0.1:8000/word?user_id=${encodeURIComponent(userId)}&word=${encodeURIComponent(sourceText)}&translation=${encodeURIComponent(translatedText)}`;
+        const url = `https://unolingo-backend-production.up.railway.app/word?user_id=${encodeURIComponent(userId)}&word=${encodeURIComponent(sourceText)}&translation=${encodeURIComponent(translatedText)}`;
         try {
             const response = await fetch(url, {
                 method: "POST",
@@ -67,7 +67,7 @@ function Translate() {
     async function fetchTranslation(textToTranslate) {
         setIsLoading(true);
         try {
-            const url = `http://127.0.0.1:8000/translate?word=${encodeURIComponent(textToTranslate)}`;
+            const url = `https://unolingo-backend-production.up.railway.app/translate?word=${encodeURIComponent(textToTranslate)}`;
 
             const response = await fetch(url, {
                 method: "GET",

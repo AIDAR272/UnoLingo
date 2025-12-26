@@ -15,7 +15,7 @@ function SignUpForm({ onSwitch }) {
         }
 
         try {
-            const response = await fetch("http://127.0.0.1:8000/auth/sign-up", {
+            const response = await fetch("https://unolingo-backend-production.up.railway.app/auth/sign-up", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username, password, repeat_password: repeatPassword })

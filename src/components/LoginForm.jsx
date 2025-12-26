@@ -9,7 +9,7 @@ function LoginForm({ onSwitch }) {
     async function log_in(e) {
         e.preventDefault();
         try {
-            const response = await fetch("http://127.0.0.1:8000/auth/log-in", {
+            const response = await fetch("https://unolingo-backend-production.up.railway.app/auth/log-in", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username, password })
